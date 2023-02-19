@@ -20,22 +20,18 @@ import { ContactComponent } from './components/contact/contact.component';
     CompanyServicesComponent,
     PricelistComponent,
     CompanyStoryComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: 'palvelumme', component:
-    CompanyServicesComponent},
-      {path: 'hinnasto', component:
-    PricelistComponent},
-      {path: 'tarinamme', component:
-    CompanyStoryComponent},
-      {path: 'yhteystiedot', component:
-    ContactComponent}
-    ])
+      { path: 'palvelumme', component: CompanyServicesComponent },
+      { path: 'hinnasto', component: PricelistComponent },
+      { path: 'tarinamme', component: CompanyStoryComponent },
+      { path: 'yhteystiedot', component: ContactComponent },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
