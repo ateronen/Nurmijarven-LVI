@@ -1,11 +1,22 @@
 <?php
 
+use Dotenv\Dotenv;
+
+require_once(__DIR__ . '/vendor/autoload.php');
+$dotenv = Dotenv::createUnsafeImmutable(__DIR__);
+$dotenv->load();
+
 $apiEndpoint = "https://graph.instagram.com/me/media";
 $accessToken = getenv('INSTAGRAM_ACCESS_TOKEN');
 
-$fields = "id,caption,media_type,media_url,thumbnail_url,caption,permalink";
+// $fields = "id,caption,media_type,media_url,thumbnail_url,permalink";
+$fields = "id,caption,media_type,media_url,thumbnail_url,permalink";
 
 $fullRequestUrl = "$apiEndpoint?fields=$fields&access_token=$accessToken";
+
+if (!$accessToken) {
+    echo "Access token seems to be missing? ";
+}
 
 $curl = curl_init();
 
@@ -34,7 +45,7 @@ if ($httpCode >= 400) {
     $errorResponse = json_decode($response, true);
     $errorMessage = isset($errorResponse["error"]["message"]) ? $errorResponse['error']['message'] : 'Unknown error';
     curl_close($curl);
-    die("API request had an error: $errorMessage");
+    die("API request had an error: $errorMessage / $httpCode ");
 }
 
 curl_close($curl);
