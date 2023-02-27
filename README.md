@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
 This is my *skills demonstration project* in Helsinki Vocational College for an existing HVAC (*heating, ventilation and air conditioning*) company. 
-The ultimate goal of this project was to build a fully responsive, mobile friendly site including a small portion in the backend. Backend consists of a social media controller file which enriches the frontend with an API connection to bring data to the frontend via Instagram Basic Display API. 
+The goal of this project was to build a fully responsive, mobile friendly site including a small portion in the backend. Backend consists of a social media controller which enriches the frontend with an API connection to bring data to the frontend via Instagram Basic Display API. 
 
 To serve or run tests on this development server, check instructions below:
 
