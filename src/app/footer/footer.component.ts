@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  contactInfo: String[] = [
+    "Testi", "Testi2"
+  ];
+  phone: String = "+123456789";
 }
