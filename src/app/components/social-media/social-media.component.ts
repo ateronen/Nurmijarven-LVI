@@ -21,10 +21,4 @@ export class SocialMediaComponent implements OnInit {
       this.postsResponse = posts;
     });
   }
-
-  // ngOnInit(): void {
-  //   this.socialDataService.getUserPosts().subscribe((data: SocialPost[] = []) => {
-  //     this.posts = data;
-  //   });    
-  // }
 }

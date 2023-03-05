@@ -13,7 +13,7 @@ export class GetSocialDataService {
   getUserPosts() {
     return this.http
       .get<{ [key: number]: SocialPost}>(
-        'https://localhost:8000/SocialMediaController.php'
+        'https://localhost/index.php/posts/list?limit=6'
       )
       .pipe(
         map(data =>{
@@ -28,20 +28,3 @@ export class GetSocialDataService {
       );
     }
 }
-
-
-// import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class GetSocialDataService {
-//   // private apiUrl =  process.env['API_URL'];
-//   constructor(private http: HttpClient) { }
-//   private apiUrl = 'https://localhost:8000/SocialMediaController.php';
-
-//   getUserPosts() {
-//     return this.http.get(this.apiUrl);
-//   }
-// }
