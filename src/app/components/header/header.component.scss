@@ -1,41 +1,50 @@
+@import "src/assets/scss/variables/palette.scss";
+
 header {
   height: 100%;
-}
-nav {
-  height: 50px;
-  width: 100%;
-  margin: 0;
-}
-.button {
-  background: #ffffff linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  // border-radius: 6px;
-  // border: 1px solid #dcdcdc;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 12px 32px;
-  text-decoration: none;
-}
-.activebutton {
-  box-shadow: inset 0 1px 0 0 #dcecfb;
-  background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-  border: 1px solid #84bbf3;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #528ecc;
+  display: block;
 }
 .menu-logo {
-  float: left;
+  width: clamp(150px, 50%, 300px);
 }
-ul {
-  margin: 0;
+nav {
+  background-image: linear-gradient(
+    to bottom right,
+    $primary-color,
+    $secondary-color
+  );
+  color: $primary-text-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+  // width: 100vw;
+  overflow: hidden;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
   padding: 0;
-  list-style-type: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-li {
-  display: inline;
-  float: right;
   margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+nav li.active {
+  color: $primary-color;
+  padding: 0;
+  border-bottom: solid 3px $secondary-text-color;
+}
+nav li:hover {
+  color: $primary-color;
 }

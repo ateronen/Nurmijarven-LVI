@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  contactInfo: String[] = [
-    "Testi", "Testi2"
-  ];
   phone: String = "+123456789";
+  email: String = "lauri(at)nurmijarvenlvi.fi";
+
+  currentDate = new Date().getFullYear();
+  footerCopyright: String =  "Nurmijärven LVI Oy, "+ this.currentDate;
 }

@@ -1,0 +1,6 @@
+/** Default font size calculated with Font-size Clamp Generator
+    Min vw 320px, Max vw 1000px
+    Min font size 0.8rem, Max font size 1.2rem **/
+$font-size: clamp(1rem, 0.6118rem + 0.9412vw, 1.1rem);
+$font-size-large: clamp(1.2rem, 1.0118rem + 0.9412vw, 1.6rem);
+$font-line-height: 1.5;
