@@ -1,10 +1,12 @@
-<div>
-    <p *ngIf="postsResponse.length < 1 && !isLoading">Hmm... Instagram-syöte näyttää tyhjältä. Palataan pian asiaan!</p>
-    <ul *ngIf="postsResponse.length >= 1 && !isLoading">
+<!-- <p class="caption">{{this.postsResponse[0].caption}}</p> -->
+<div class="content-wrapper">
+    <!-- <p *ngIf="postsResponse.length < 1 && !isFetching">Hmm... Instagram-syöte näyttää tyhjältä. Palataan pian asiaan!</p>
+    <ul *ngIf="postsResponse.length >= 1 && !isFetching"> -->
+        <ul>
         <li *ngFor="let post of postsResponse">
             <img [src]="post.media_url">
             <p>{{post.caption}}</p>
         </li>
     </ul>
-    <p *ngIf="isLoading">Ladataan Instagram-syötettä...</p>
+    <p *ngIf="isFetching">Ladataan Instagram-syötettä...</p>
 </div>

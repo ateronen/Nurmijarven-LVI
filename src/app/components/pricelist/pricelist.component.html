@@ -1,6 +1,6 @@
-<h2>HINNASTO</h2>
-<div className="pricelist-container">
-    <div className="pricelist">
+<h1>HINNASTO</h1>
+<div class="pricelist-container">
+    <div class="pricelist">
         <table>
             <thead>
                 <tr>
@@ -11,22 +11,29 @@
             </thead>
         <tbody>
         <tr *ngFor="let product of products">
-            <td className="service-name">{{product.productName}}</td>
-            <td className="service-price-alv">{{product.productPriceAlv}}</td>
-            <td className="service-price-no-alv">{{product.productPriceNoAlv}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productPriceAlv}}</td>
+            <td>{{product.productPriceNoAlv}}</td>
         </tr>
         </tbody>
         </table>
         <div className="pricing-details">
             <table>
-                <tr>Normaali työaika on  ma-pe klo 07:00-15:30</tr>
-                <tr>Ylityöt veloitetaan asiakkaalta mikäli toisin ei sovittu</tr>
-                <tr>Ensimmäiset 2h ylitöitä +50% sen jälkeen +100% normaaliin tuntiveloitukseen.</tr>
-                <tr>Minimiveloitus 2h.</tr>
-                <tr>Ilta/yötyö +100% normaaliin tuntiveloitukseen.</tr>
-                <tr>Lauantai +100% normaaliin tuntiveloitukseen.</tr>
-                <tr>Sunnuntai/arkipyhät +200% normaaliin tuntiveloitukseen.</tr>
-                <tr>Mahdollinen pysäköintimaksu veloitetaan asiakkaalta.</tr>
+                <thead>
+                    <tr>
+                        <th>Työn hintaan vaikuttavat tekijät</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>Normaali työaika on  ma-pe klo 07:00-15:30</tr>
+                    <tr>Ylityöt veloitetaan asiakkaalta mikäli toisin ei sovittu</tr>
+                    <tr>Ensimmäiset 2h ylitöitä +50% sen jälkeen +100% normaaliin tuntiveloitukseen.</tr>
+                    <tr>Minimiveloitus 2h.</tr>
+                    <tr>Ilta/yötyö +100% normaaliin tuntiveloitukseen.</tr>
+                    <tr>Lauantai +100% normaaliin tuntiveloitukseen.</tr>
+                    <tr>Sunnuntai/arkipyhät +200% normaaliin tuntiveloitukseen.</tr>
+                    <tr>Mahdollinen pysäköintimaksu veloitetaan asiakkaalta.</tr>
+                </tbody>
             </table>
         </div>
     </div>

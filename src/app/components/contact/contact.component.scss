@@ -1,0 +1,6 @@
+@import "src/assets/scss/variables/fonts.scss";
+@import "src/assets/scss/variables/palette.scss";
+
+h1 {
+  font-size: calc($font-size-xl * 0.8);
+}
