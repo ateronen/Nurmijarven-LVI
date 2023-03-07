@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
-import { SocialPost } from '../modules/social';
+import { SocialPost } from '../components/social-media/social';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class GetSocialDataService {
   getUserPosts() {
     return this.http
       .get<{ [key: number]: SocialPost}>(
-        'https://localhost/index.php/posts/list?limit=6'
+        'http://localhost:8000/index.php/posts/list?limit=6'
       )
       .pipe(
         map(data =>{
@@ -23,6 +23,7 @@ export class GetSocialDataService {
               postsArray.push({ ...data[key], id: key });
             }
           }
+          console.log(postsArray);
           return postsArray;
         })
       );

@@ -1,31 +1,47 @@
 <footer>
+    <div class="content-wrapper">
     <div class="footer-left">
         <table class="footer-table-left">
+            <thead>
             <tr>
-                <th>Nurmijärven LVI Oy</th>
+                <th>Nurmijärven LVI Oy / logo</th>
             </tr>
-            <dl>
-                <dt>Puhelin</dt>
-                <dd><a href='tel:+{{phone}}'>{{phone}}</a></dd>
-            </dl>
-            <dl>
-                <dt>Sähköposti</dt>
-                <dd>test@example.com</dd>
-            </dl>
-            <tr>
-                <td><span>&copy;</span> {{footerCopyright}}</td>
-            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Puhelin</th>
+                    <td><a href='tel:{{phone}}'>{{phone}}</a></td>
+                </tr>
+                <tr>
+                    <th>Sähköposti</th>
+                    <td>{{email}}</td>
+                </tr>
+                <tr>
+                    <th>Y-tunnus</th>
+                    <td>{{businessId}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <div class="footer-right">
     <table class="footer-table-right">
-        <tr>
-            <th>Ota seurantaan meidän some</th>
-        </tr>
-        <tr>
-            <td>Instagram</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Seuraa töitämme somessa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span><i></i></span>Instagram</td>
+            </tr>
+            <tr>
+                <td><img class="trusted-partner-logo" src="src/assets/img/Logotiedostot/LK_valkoinen_rgb.jpg" alt="Luotettava kumppani logo"></td>
+            </tr>
+        </tbody>
     </table>
     </div>
-    <!-- <button class="back-to-top">Takaisin ylös</button> -->
+</div>
+<div class="italic-copyright">
+    <p>&copy;{{footerCopyright}}</p>
+</div>
 </footer>

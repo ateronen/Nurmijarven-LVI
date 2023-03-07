@@ -35,6 +35,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HttpClientModule,
     AppRoutingModule,
   ],
+  // exports: [
+  // SocialMediaComponent,
+  // ],
   providers: [],
   bootstrap: [AppComponent],
 })

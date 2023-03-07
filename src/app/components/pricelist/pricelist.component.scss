@@ -1,0 +1,14 @@
+@import "src/assets/scss/variables/fonts.scss";
+@import "src/assets/scss/variables/palette.scss";
+
+h1 {
+  font-size: calc($font-size-xl * 0.8);
+}
+// .content-wrapper {
+//   margin: 1.5em 2em;
+//   padding-top: 4em;
+//   //   min-height: 80vh;
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row;
+// }
