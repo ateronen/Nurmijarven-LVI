@@ -20,6 +20,7 @@ export class SocialMediaComponent implements OnInit {
     this.socialDataService.getUserPosts().subscribe(posts => {
       this.isFetching = false;
       this.postsResponse = posts;
+      console.log(posts);
     });
   }
 }

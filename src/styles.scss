@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/scss/variables/fonts.scss";
 @import "assets/scss/variables/palette.scss";
+@import "assets/scss/components";
 
 *,
 body,
@@ -15,17 +16,9 @@ html {
 body,
 html {
   width: 100%;
+  //MIGHT HAVE TO FIX
+  height: 100%;
   overflow-x: hidden;
-}
-table {
-  thead,
-  tbody {
-    th,
-    td {
-      text-align: left;
-      padding: 2em;
-    }
-  }
 }
 h1,
 h2 {
@@ -36,4 +29,11 @@ h2 {
   margin-right: auto;
   flex-grow: 1;
   flex-basis: 100%;
+}
+.container {
+  max-width: 1200px;
+  flex-basis: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
