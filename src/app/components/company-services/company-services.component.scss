@@ -6,8 +6,7 @@ h1 {
 }
 .content-wrapper {
   margin: 1.5em 2em;
-  padding-top: 4em;
-  //   min-height: 80vh;
+  padding-top: 2em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -15,13 +14,18 @@ h1 {
 }
 .content-container {
   flex: 1;
+  padding-bottom: 2em;
 }
 .content-container:first-child {
   margin-right: 0.5em;
 }
 .service-image {
   max-height: 100vh;
+  max-width: fit-content;
 }
 .services-subheading {
   float: left;
+}
+.button-wrapper {
+  margin-top: 1em;
 }

@@ -1,6 +1,6 @@
 @import "src/assets/scss/variables/fonts.scss";
 @import "src/assets/scss/variables/palette.scss";
-@import "src/styles.scss";
+// @import "src/styles.scss";
 
 footer {
   width: 100%;
@@ -9,31 +9,40 @@ footer {
   color: $primary-text-color;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  // align-items: stretch;
   flex-direction: column;
-}
-.content-wrapper {
-  margin-right: 4em;
 }
 table {
   thead,
   tbody {
     th,
     td {
+      text-align: left;
       padding: 1em;
+      align-items: center;
     }
   }
 }
-.footer-left {
-  float: left;
+// .footer-left {
+//   float: left;
+// }
+// .footer-table-right {
+//   float: right;
+// }
+.footer-table {
+  flex: 1;
 }
-.footer-right {
-  float: right;
-}
+
 .italic-copyright {
-  // font-family: $body-font-family;
+  font-family: $body-font-family;
   font-style: italic;
   font-weight: normal;
   text-align: center;
   padding-top: 1em;
+}
+.trusted-partner-logo {
+  width: clamp(100px, 50%, 200px);
+}
+.footer-logo {
+  width: clamp(150px, 50%, 300px);
 }

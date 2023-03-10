@@ -1,14 +1,21 @@
 @import "src/assets/scss/variables/fonts.scss";
 @import "src/assets/scss/variables/palette.scss";
+// @import "src/assets/components/table.scss";
 
 h1 {
   font-size: calc($font-size-xl * 0.8);
 }
-// .content-wrapper {
-//   margin: 1.5em 2em;
-//   padding-top: 4em;
-//   //   min-height: 80vh;
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: row;
-// }
+/* Temporarily allow horizontal scroll on pricelist until VAT/VATless option is done. */
+.pricelist {
+  overflow-x: auto;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+li {
+  list-style-type: square;
+}
+.pricing-details {
+  padding: 1em 2em;
+}

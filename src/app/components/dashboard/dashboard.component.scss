@@ -8,9 +8,11 @@
     ),
     url("/assets/img/kylpyamme-vaaka.JPEG");
   width: 100%;
+  min-height: 100dvh;
   min-height: 100vh;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -34,4 +36,10 @@
   color: $primary-text-color;
   font-size: $font-size-large;
   text-shadow: $text-shadow-secondary;
+}
+.base-page {
+  min-height: 50vh;
+}
+.button-wrapper {
+  margin-top: 1em;
 }
