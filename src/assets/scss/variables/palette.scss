@@ -1,6 +1,6 @@
 $background-color-transparent: transparent;
 $primary-color: #1d0578;
-$secondary-color: #36a8ff;
+$secondary-color: #1f7cc4;
 $primary-text-color: #fdfff7;
 $secondary-text-color: #100b00;
 $footer-bg: #414f55;
@@ -21,3 +21,7 @@ $text-shadow-secondary: 0 0 5px rgba($secondary-text-color, 0.1),
   0 1px 3px rgba($secondary-text-color, 0.3),
   0 3px 5px rgba($secondary-text-color, 0.2),
   0 5px 10px rgba($secondary-text-color, 0.25);
+
+// $text-shadow-blue: 0 1px 3px rgba($primary-color, 0.3),
+//   0 3px 5px rgba($primary-color, 0.15), 0 5px 10px rgba($primary-color, 0.2),
+//   0 10px 10px rgba($primary-color, 0.15), 0 20px 20px rgba($primary-color, 0.1);

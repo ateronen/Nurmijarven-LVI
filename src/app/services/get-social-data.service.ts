@@ -23,7 +23,6 @@ export class GetSocialDataService {
               postsArray.push({ ...data[key], id: key });
             }
           }
-          console.log(postsArray);
           return postsArray;
         })
       );

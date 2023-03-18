@@ -1,7 +1,15 @@
+//MODULES
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
+//ICONS
+import { faSquare, faCheckSquare, faBars, faXmark, faEnvelope, faPhone, faLocationDot, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+
+// COMPONENTS
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/menu/menu.component';
@@ -11,10 +19,10 @@ import { PricelistComponent } from './components/pricelist/pricelist.component';
 import { CompanyStoryComponent } from './components/company-story/company-story.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+
 
 @NgModule({
   declarations: [
@@ -34,11 +42,23 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
-  // exports: [
-  // SocialMediaComponent,
-  // ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(
+      faSquare,
+      faCheckSquare,
+      faBars,
+      faXmark,
+      faEnvelope,
+      faPhone,
+      faLocationDot,
+      faSquareInstagram,
+      faHandPointRight
+    );
+  }
+}

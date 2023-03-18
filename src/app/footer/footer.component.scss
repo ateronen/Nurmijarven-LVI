@@ -8,9 +8,10 @@ footer {
   background-color: $footer-bg;
   color: $primary-text-color;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   // align-items: stretch;
   flex-direction: column;
+  font-style: normal;
 }
 table {
   thead,
@@ -23,20 +24,21 @@ table {
     }
   }
 }
-// .footer-left {
-//   float: left;
-// }
-// .footer-table-right {
-//   float: right;
-// }
+.contact-phone {
+  text-decoration: none;
+  color: $primary-text-color;
+}
+a[href^="tel:"]:before {
+  content: "\260E";
+  margin-right: 0.5em;
+  color: $primary-text-color;
+}
 .footer-table {
   flex: 1;
 }
-
 .italic-copyright {
   font-family: $body-font-family;
   font-style: italic;
-  font-weight: normal;
   text-align: center;
   padding-top: 1em;
 }
