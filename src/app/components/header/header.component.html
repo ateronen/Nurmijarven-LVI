@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar">
+    <nav>
       <ul class="menu-items-left">
         <li class="logo-link">
           <a
@@ -10,20 +10,16 @@
           >
         </li>
       </ul>
-      <ul class="menu-items-right">
-        <!-- <li class="menu-item">
-          <a
-            class="button"
-            routerLink="/"
-            ariaCurrentWhenActive="page"
-          >
-            Etusivu</a
-          > -->
+      <ul class="hamburger-menu" (click)="toggleMenu()">
+          <li class="menu-icon-wrapper">
+              <fa-icon [icon]="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" class="fa-fw" size="2x" ></fa-icon>
+          </li>
+      </ul>
+      <ul class="menu-items-right" [class.is-open]="isMenuOpen">
         <li class="menu-item">
           <a
-            class="menu-link"
             routerLink="/palvelumme"
-            routerLinkActive="menu-link-active"
+            routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
           >
             Palvelumme</a
@@ -31,29 +27,17 @@
         </li>
         <li class="menu-item">
           <a
-            class="menu-link"
             routerLink="/hinnasto"
-            routerLinkActive="menu-link-active"
+            routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
           >
             Hinnasto</a
           >
         </li>
-        <!-- <li class="menu-item">
-          <a
-            class="menu-link"
-            routerLink="/tarinamme"
-            routerLinkActive="menu-link-active"
-            ariaCurrentWhenActive="page"
-          >
-            Tarinamme</a
-          >
-        </li> -->
         <li class="menu-item">
           <a
-            class="menu-link"
             routerLink="/yhteystiedot"
-            routerLinkActive="menu-link-active"
+            routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
           >
             Yhteystiedot</a

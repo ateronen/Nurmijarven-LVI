@@ -1,9 +1,10 @@
 @import "src/assets/scss/variables/palette.scss";
+@import "src/styles.scss";
 
-.menu-logo {
-  width: clamp(150px, 50%, 300px);
-}
 nav {
+  .menu-logo {
+    width: clamp(150px, 50%, 300px);
+  }
   background-image: linear-gradient(
     to bottom right,
     $primary-color,
@@ -15,9 +16,59 @@ nav {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2);
+
+  .menu-items-left {
+    display: flex;
+    align-items: center;
+
+    .logo-link {
+      width: 70%;
+    }
+  }
+
+  .hamburger-menu {
+    padding: 0;
+    margin: 0;
+    display: none;
+    align-items: center;
+
+    @media (max-width: $mobileBreakpoint) {
+      display: block;
+    }
+  }
+
+  .menu-items-right {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mobileBreakpoint) {
+      display: none;
+
+      &.is-open {
+        display: block;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        width: 100%;
+
+        /* @TODO: 
+        Horizontally center mobile menu links. 
+        Make open menu stick to the bottom of the navbar by calculating whatever the height of the navbar might be. */
+        .menu-item {
+          display: block;
+          background-image: linear-gradient(
+            to bottom right,
+            rgba($primary-color, 0.8),
+            $secondary-color
+          );
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 nav ul {
   padding: 0;
@@ -35,18 +86,22 @@ nav a {
   align-items: center;
   padding: 0.25rem;
 }
-// nav li.active {
-//   color: $primary-color;
-//   padding: 0;
-//   text-decoration: underline;
-// }
-// nav a.active {
-//   color: $primary-color;
-//   text-decoration: underline;
-// }
+nav li .active-page {
+  color: $primary-color;
+  text-decoration: underline;
+}
 nav li {
-  transition: 0.6s ease;
+  transition: 0.4s ease;
 }
 nav li:hover {
   color: $primary-color;
+}
+
+/* @TODO: Add more padding or smth to icon wrapper right*/
+nav .menu-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }

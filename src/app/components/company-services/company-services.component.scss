@@ -4,27 +4,33 @@
 h1 {
   font-size: calc($font-size-xl * 0.8);
 }
-.content-wrapper {
-  margin: 1.5em 2em;
-  padding-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  font-size: $font-size-large;
-}
+// .content-wrapper {
+//   margin: 1.5em 2em;
+//   padding-top: 2em;
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row;
+//   font-size: $font-size-large;
+// }
 .content-container {
   flex: 1;
   padding-bottom: 2em;
+  width: 100%;
 }
 .content-container:first-child {
   margin-right: 0.5em;
 }
+.service-image img {
+  margin: auto;
+  width: 100%;
+}
 .service-image {
-  max-height: 100vh;
+  max-height: 80vh;
   max-width: fit-content;
 }
 .services-subheading {
-  float: left;
+  text-align: left;
+  display: inline-block;
 }
 .button-wrapper {
   margin-top: 1em;

@@ -13,8 +13,12 @@ h1 {
   margin: 0 auto;
   padding: 0 2em;
 }
-li {
-  list-style-type: square;
+.styled-list {
+  list-style-image: linear-gradient(
+    to left bottom,
+    $primary-color,
+    $secondary-color
+  );
 }
 .pricing-details {
   padding: 1em 2em;

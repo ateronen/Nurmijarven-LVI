@@ -1,0 +1,9 @@
+@import "src/styles";
+
+.container {
+  min-height: 80vh;
+  h1 {
+    margin-top: 2em;
+    font-size: $font-size-large;
+  }
+}

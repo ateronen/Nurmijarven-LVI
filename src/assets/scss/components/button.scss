@@ -13,6 +13,9 @@
   &.button-small {
     font-size: $font-size;
   }
+  &.button-large {
+    font-size: $font-size-large;
+  }
 }
 .button:hover {
   background-color: $secondary-color;

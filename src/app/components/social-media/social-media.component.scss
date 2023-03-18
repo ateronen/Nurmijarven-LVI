@@ -1,6 +1,71 @@
 @import "src/assets/scss/variables/fonts.scss";
+@import "src/styles";
 
-.caption {
-  font-family: $body-font-family;
-  color: black;
+.posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 2em;
 }
+.card {
+  padding: 1em;
+  box-shadow: $text-shadow-main;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-between;
+  margin: 1em;
+  max-width: calc(1000px / 3);
+  font-size: $font-size;
+  font-family: $body-font-family;
+  font-weight: 600;
+  font-style: italic;
+
+  ul,
+  li {
+    list-style-type: none;
+  }
+}
+
+.card img {
+  margin: auto;
+  width: 100%;
+  min-height: 50%;
+}
+img {
+  max-width: 300px;
+  width: auto;
+  padding: 0 0.5em;
+  border-radius: 25px;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+/* @TODO: Push card content down so every card looks the same */
+.button-wrapper {
+  margin: 1em auto;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section-title {
+  font-size: $font-size-large;
+  font-weight: 600;
+  padding: 2em 1em;
+}
+.caption-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 0.5em;
+}
+// .highlight-hashtags {
+//   color: $primary-color;
+// }
