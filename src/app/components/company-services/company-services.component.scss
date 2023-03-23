@@ -1,37 +1,87 @@
-@import "src/assets/scss/variables/fonts.scss";
-@import "src/assets/scss/variables/palette.scss";
+@import "src/styles";
 
+.background-image-gradient {
+  @include theme($theme: BackGroundImage);
+}
+.container {
+  padding: 1.5em;
+  color: $primary-text-color;
+  text-shadow: $text-shadow-main;
+}
 h1 {
   font-size: calc($font-size-xl * 0.8);
+  margin: 1.5em 0;
+  font-size: $font-size-xl;
 }
-// .content-wrapper {
-//   margin: 1.5em 2em;
-//   padding-top: 2em;
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: row;
-//   font-size: $font-size-large;
-// }
-.content-container {
-  flex: 1;
+.grid-col-span-4 {
+  grid-column: span 4;
+  display: flex;
+  align-items: flex-end;
+  .card-image {
+    width: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 550px;
+    }
+  }
+  .button-wrapper {
+    padding-bottom: 1em;
+  }
+}
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+ul {
+  display: grid;
+  gap: 4em;
+  list-style-type: none;
+  width: fit-content;
+
+  @media (max-width: $mobileBreakpoint) {
+    .grid-col-span-2 {
+      grid-column: span 4;
+    }
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+.card {
+  border-radius: 2em;
+  padding: 2.5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: radial-gradient($secondary-color, rgba($secondary-color, 0.8));
+  box-shadow: $box-shadow-main;
+  button {
+    border: 3px solid $primary-text-color;
+  }
+}
+.card-text {
   padding-bottom: 2em;
-  width: 100%;
 }
-.content-container:first-child {
-  margin-right: 0.5em;
-}
-.service-image img {
-  margin: auto;
-  width: 100%;
-}
-.service-image {
-  max-height: 80vh;
-  max-width: fit-content;
+img {
+  height: auto;
+  width: 350px;
+  max-width: 100%;
+  border-radius: 2em;
+  border: 3px solid $primary-text-color;
 }
 .services-subheading {
   text-align: left;
   display: inline-block;
+  font-size: $font-size-large;
 }
-.button-wrapper {
-  margin-top: 1em;
+.container .contact {
+  background: radial-gradient($primary-color, rgba($secondary-color, 0.8));
+  width: 100%;
+  padding: 2em 1em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  box-shadow: $box-shadow-main;
 }

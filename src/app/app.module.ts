@@ -6,13 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 //ICONS
-import { faSquare, faCheckSquare, faBars, faXmark, faEnvelope, faPhone, faLocationDot, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import { faSquare, faCheckSquare, faBars, faXmark, faEnvelope, faPhone, faLocationDot, faHandPointRight, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MenuComponent } from './components/header/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompanyServicesComponent } from './components/company-services/company-services.component';
 import { PricelistComponent } from './components/pricelist/pricelist.component';
@@ -28,7 +27,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   declarations: [
     AppComponent,
     HeaderComponent,
-    MenuComponent,
     FooterComponent,
     CompanyServicesComponent,
     PricelistComponent,
@@ -58,7 +56,8 @@ export class AppModule {
       faPhone,
       faLocationDot,
       faSquareInstagram,
-      faHandPointRight
+      faHandPointRight,
+      faAddressCard
     );
   }
 }

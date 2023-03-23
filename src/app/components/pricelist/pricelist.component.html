@@ -1,20 +1,20 @@
-<h1>HINNASTO</h1>
+<div class="background-image-gradient">
 <div class="container">
+    <h1>HINNASTO</h1>
     <div class="pricelist">
         <table>
             <thead>
                 <tr>
                 <th>Palvelu</th>
-                <th>Hinta alv 24%</th>
-                <th>Hinta alv 0%</th>
+                <th><button class="button toggleVAT" (click)="toggleVAT()">{{!isVATprice ? priceWithVAT : priceWithoutVAT}}</button></th>
                 </tr>
             </thead>
         <tbody>
         <tr *ngFor="let product of products">
             <td>{{product.productName}}</td>
-            <!-- @TODO: Add option to show only VAT or VATless price (esp. in mobile) -->
-            <td>{{product.productPriceAlv}}</td>
-            <td>{{product.productPriceNoAlv}}</td>
+            <ng-container *ngIf="isVATprice; then withoutVAT; else withVAT"></ng-container>
+            <ng-template #withVAT><td>{{product.productPriceAlv}}</td></ng-template>
+            <ng-template #withoutVAT><td>{{product.productPriceNoAlv}}</td></ng-template>
         </tr>
         </tbody>
         </table>
@@ -31,4 +31,5 @@
             <li>Mahdollinen pysäköintimaksu veloitetaan asiakkaalta.</li>
         </ul>
     </div>
+</div>
 </div>

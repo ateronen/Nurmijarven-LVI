@@ -15,6 +15,7 @@
   }
   &.button-large {
     font-size: $font-size-large;
+    border: 3px solid $primary-text-color;
   }
 }
 .button:hover {

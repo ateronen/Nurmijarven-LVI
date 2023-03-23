@@ -2,6 +2,8 @@
 @import "assets/scss/variables/fonts.scss";
 @import "assets/scss/variables/palette.scss";
 @import "assets/scss/variables/breakpoints.scss";
+@import "assets/scss/variables/animations.scss";
+@import "assets/scss/variables/mixins.scss";
 @import "assets/scss/components";
 
 *,
@@ -17,9 +19,7 @@ html {
 body,
 html {
   width: 100%;
-  //MIGHT HAVE TO FIX
   height: 100%;
-  // overflow-x: hidden;
 }
 body {
   overflow: auto;
@@ -40,7 +40,8 @@ h3 {
   flex-basis: 100%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 a,
 button {

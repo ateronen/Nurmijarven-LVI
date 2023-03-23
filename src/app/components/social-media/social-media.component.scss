@@ -6,7 +6,6 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   margin: 0 auto;
-  padding: 2em;
 }
 .card {
   padding: 1em;
@@ -19,7 +18,7 @@
   justify-content: space-between;
   margin: 1em;
   max-width: calc(1000px / 3);
-  font-size: $font-size;
+  font-size: $font-size-large;
   font-family: $body-font-family;
   font-weight: 600;
   font-style: italic;
