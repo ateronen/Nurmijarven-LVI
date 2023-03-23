@@ -1,17 +1,25 @@
 @import "src/assets/scss/variables/fonts.scss";
 @import "src/assets/scss/variables/palette.scss";
-// @import "src/styles.scss";
+@import "src/styles.scss";
 
 footer {
+  margin: 0;
+  padding: 0;
   width: 100%;
+  max-height: 1100px;
   bottom: 0;
   background-color: $footer-bg;
   color: $primary-text-color;
   display: flex;
-  justify-content: space-around;
-  // align-items: stretch;
+  justify-content: space-between;
   flex-direction: column;
   font-style: normal;
+}
+.footer-table {
+  padding: 0 2em;
+  flex: 1;
+}
+.container {
 }
 table {
   thead,
@@ -19,23 +27,34 @@ table {
     th,
     td {
       text-align: left;
-      padding: 1em;
+      padding: 0.5em;
       align-items: center;
+      float: left;
     }
   }
 }
+.footer-table-left th {
+  width: 30%;
+
+  @media (max-width: $midBreakpoint) {
+    width: 100%;
+    padding: 0;
+  }
+}
+.contact {
+  margin-right: 0.5em;
+}
+
 .contact-phone {
   text-decoration: none;
   color: $primary-text-color;
+  transition: $transition;
+
+  &:hover {
+    color: $secondary-color;
+  }
 }
-a[href^="tel:"]:before {
-  content: "\260E";
-  margin-right: 0.5em;
-  color: $primary-text-color;
-}
-.footer-table {
-  flex: 1;
-}
+
 .italic-copyright {
   font-family: $body-font-family;
   font-style: italic;
@@ -47,4 +66,14 @@ a[href^="tel:"]:before {
 }
 .footer-logo {
   width: clamp(150px, 50%, 300px);
+}
+.follow-on-instagram {
+  background: none;
+  border: none;
+  color: $primary-text-color;
+  transition: $transition;
+  &:hover {
+    transform: scale(1.1);
+    color: $secondary-color;
+  }
 }

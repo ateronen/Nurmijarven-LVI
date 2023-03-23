@@ -18,7 +18,7 @@ nav {
   padding: 0 1rem;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: bottom $box-shadow-main;
 
   .menu-items-left {
     display: flex;
@@ -54,17 +54,18 @@ nav {
         left: 0;
         width: 100%;
 
-        /* @TODO: 
-        Horizontally center mobile menu links. 
+        /* @TODO:
+        Horizontally center mobile menu links.
         Make open menu stick to the bottom of the navbar by calculating whatever the height of the navbar might be. */
         .menu-item {
-          display: block;
-          background-image: linear-gradient(
-            to bottom right,
-            rgba($primary-color, 0.8),
-            $secondary-color
-          );
+          // display: block;
+          background-color: $primary-color;
           text-align: center;
+          padding: 1em 0;
+          border-bottom: 2px solid $primary-text-color;
+        }
+        .menu-item:hover {
+          color: $secondary-color;
         }
       }
     }
@@ -82,26 +83,34 @@ nav a {
   color: inherit;
   text-decoration: none;
   height: 100%;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   padding: 0.25rem;
+
+  @if (max-width: $mobileBreakpoint) {
+    display: block;
+  }
 }
 nav li .active-page {
-  color: $primary-color;
-  text-decoration: underline;
+  text-decoration: 3px solid $primary-text-color underline;
+  @if text-decoration {
+    transtion: 0;
+    color: $primary-text-color;
+  }
 }
 nav li {
   transition: 0.4s ease;
 }
+
 nav li:hover {
   color: $primary-color;
 }
 
-/* @TODO: Add more padding or smth to icon wrapper right*/
 nav .menu-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding-right: 0.7em;
 }

@@ -42,6 +42,7 @@
     $primary-color,
     $secondary-color
   );
+  min-height: 50dvh;
   min-height: 50vh;
   padding: 2em 1em;
   margin-top: 2em;
@@ -52,9 +53,9 @@
     font-weight: 600;
     font-size: $font-size-large;
   }
-  .button {
-    border: 1px solid $primary-text-color;
-  }
+  // .button {
+  //   border: 3px solid $primary-text-color;
+  // }
 
   @media (max-width: $midBreakpoint) {
     border-radius: 0px;

@@ -10,15 +10,15 @@
             <tbody>
                 <tr>
                     <th>Puhelin</th>
-                    <td><a class="contact-phone" href='tel:{{phone}}'>+358(0)404147502</a></td>
+                    <td><span class="contact"><fa-icon [icon]="['fas', 'phone']"></fa-icon></span><a class="contact-phone" href='tel:{{phone}}'>+358(0)404147502</a></td>
                 </tr>
                 <tr>
                     <th>Sähköposti</th>
-                    <td>{{email}}</td>
+                    <td><span class="contact"><fa-icon [icon]="['fas', 'envelope']"></fa-icon></span>{{email}}</td>
                 </tr>
                 <tr>
                     <th>Y-tunnus</th>
-                    <td>{{businessId}}</td>
+                    <td><span class="contact"><fa-icon [icon]="['fas', 'address-card']"></fa-icon></span>{{businessId}}</td>
                 </tr>
             </tbody>
         </table>
@@ -27,13 +27,18 @@
     <table class="footer-table-right">
         <thead>
             <tr>
-                <th>Seuraa töitämme somessa</th>
+                <th>Seuraa töitämme somessa: </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><span><i></i></span>Instagram logo ja linkki tähän</td>
+                <td><button class="follow-on-instagram" type="button" (click)="goToUrl()"><span><fa-icon [icon]="faSquareInstagram" class="fa-fw" size="3x"></fa-icon></span></button></td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Yrityksemme on luotettava kumppani</th>
+                </tr>
+            </thead>
             <tr>
                 <td><img class="trusted-partner-logo" src="assets/img/Logotiedostot/LK_valkoinen_rgb.jpg" alt="Luotettava kumppani logo"></td>
             </tr>

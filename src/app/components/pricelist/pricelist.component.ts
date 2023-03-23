@@ -7,11 +7,19 @@ import { Component } from '@angular/core';
 })
 export class PricelistComponent {
 
+  isVATprice = true;
+  priceWithVAT: string = "Näytä hinta ALV 0%";
+  priceWithoutVAT: string = "Näytä hinta ALV 24%";
+
+  toggleVAT() {
+    this.isVATprice = !this.isVATprice;
+  }
+
   products = [
     {
     "id": 1,
     "productName": "LVI-asennus/huoltotyöt",
-    "productPriceAlv": "68€/h",
+    "productPriceAlv": "63,24€/h",
     "productPriceNoAlv": "51€/h"
     },
     {

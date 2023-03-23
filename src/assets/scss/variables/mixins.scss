@@ -1,0 +1,30 @@
+@mixin theme($theme: BackGroundImage) {
+  background-image: linear-gradient(
+      120deg,
+      rgba($secondary-color, 0.9),
+      rgba($secondary-color, 0.6),
+      rgba($secondary-color, 0.9)
+    ),
+    url("/assets/img/IMG_6087.JPEG");
+  width: 100%;
+  min-height: 100dvh;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// @mixin theme($styledList: StyledList) {
+//   list-style-image: linear-gradient(
+//     to left bottom,
+//     $primary-color,
+//     $secondary-color
+//   );
+// }
+@mixin styledList {
+  list-style-image: linear-gradient(
+    to left bottom,
+    $primary-color,
+    $secondary-color
+  );
+}
