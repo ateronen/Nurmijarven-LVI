@@ -1,6 +1,10 @@
-@import "src/assets/scss/variables/fonts.scss";
 @import "src/styles";
 
+.empty-social-feed {
+  text-align: center;
+  align-items: center;
+  margin: 1em auto;
+}
 .posts {
   display: flex;
   flex-flow: row wrap;
@@ -46,7 +50,6 @@ a:visited {
   display: inline-block;
   text-align: center;
 }
-/* @TODO: Push card content down so every card looks the same */
 .button-wrapper {
   margin: 1em auto;
   align-content: center;

@@ -6,7 +6,6 @@ footer {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-height: 1100px;
   bottom: 0;
   background-color: $footer-bg;
   color: $primary-text-color;
@@ -18,8 +17,6 @@ footer {
 .footer-table {
   padding: 0 2em;
   flex: 1;
-}
-.container {
 }
 table {
   thead,
@@ -51,7 +48,11 @@ table {
   transition: $transition;
 
   &:hover {
-    color: $secondary-color;
+    color: lightseagreen;
+  }
+  &:focus-visible {
+    transform: scale(1.1);
+    color: lightseagreen;
   }
 }
 
@@ -74,6 +75,10 @@ table {
   transition: $transition;
   &:hover {
     transform: scale(1.1);
-    color: $secondary-color;
+    color: lightseagreen;
+  }
+  &:focus-visible {
+    transform: scale(1.1);
+    color: lightseagreen;
   }
 }

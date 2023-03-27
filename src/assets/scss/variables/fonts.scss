@@ -3,7 +3,6 @@
     Min font size 1rem, Max font size 1.1rem **/
 $font-size: clamp(1rem, 0.6118rem + 0.9412vw, 1.1rem);
 $font-size-large: clamp(1.2rem, 1.0118rem + 0.9412vw, 1.6rem);
-// $font-size-xl: clamp(1.4rem, 1.3059rem + 0.4706vw, 1.6rem);
 $font-size-xl: clamp(1.8rem, 1.1455rem + 3.2727vw, 3.6rem);
 $line-height: 1.5;
 

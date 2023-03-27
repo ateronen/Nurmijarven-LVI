@@ -6,15 +6,15 @@
             <thead>
                 <tr>
                 <th>Palvelu</th>
-                <th><button class="button toggleVAT" (click)="toggleVAT()">{{!isVATprice ? priceWithVAT : priceWithoutVAT}}</button></th>
+                <th><button class="button button-small toggleVAT" (click)="toggleVAT()">{{!isVATprice ? priceWithVAT : priceWithoutVAT}}</button></th>
                 </tr>
             </thead>
         <tbody>
         <tr *ngFor="let product of products">
             <td>{{product.productName}}</td>
             <ng-container *ngIf="isVATprice; then withoutVAT; else withVAT"></ng-container>
-            <ng-template #withVAT><td>{{product.productPriceAlv}}</td></ng-template>
-            <ng-template #withoutVAT><td>{{product.productPriceNoAlv}}</td></ng-template>
+            <ng-template #withVAT><td class="price">{{product.productPriceAlv}}</td></ng-template>
+            <ng-template #withoutVAT><td class="price">{{product.productPriceNoAlv}}</td></ng-template>
         </tr>
         </tbody>
         </table>

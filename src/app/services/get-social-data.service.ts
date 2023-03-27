@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 import { SocialPost } from '../components/social-media/social';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetSocialDataService {
-  // private apiUrl =  process.env['API_URL'];
   constructor(private http: HttpClient) { }
+  
+  private API_URL = environment.apiUrl;
 
   getUserPosts() {
     return this.http
       .get<{ [key: number]: SocialPost}>(
-        'http://localhost:8000/index.php/posts/list?limit=6'
+        this.API_URL
       )
       .pipe(
         map(data =>{

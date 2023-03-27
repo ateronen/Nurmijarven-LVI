@@ -5,22 +5,24 @@
           <a
             routerLink="/"
             ariaCurrentWhenActive="page"
+            (click)="closeMenuOnLoad()"
+            tabindex="0"
           >
             <img class="menu-logo" src="assets/img/Logotiedostot/NLVI-logo-06.png" alt="Nurmijärven LVI Oy logo"></a
           >
         </li>
       </ul>
-      <ul class="hamburger-menu" (click)="toggleMenu()">
-          <li class="menu-icon-wrapper">
-              <fa-icon [icon]="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" class="fa-fw" size="2x" ></fa-icon>
-          </li>
+      <ul class="hamburger-menu" role="navigation" aria-label="Mobile" (click)="toggleMenu()" tabindex="-1">
+            <button class="menu-icon-wrapper" type="button"><fa-icon [icon]="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" class="fa-fw" size="2x" ></fa-icon></button>
       </ul>
-      <ul class="menu-items-right" [class.is-open]="isMenuOpen">
+      <ul class="menu-items-right" role="navigation" aria-label="Main" [class.is-open]="isMenuOpen">
         <li class="menu-item">
           <a
             routerLink="/palvelumme"
             routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
+            tabindex="0"
+            (click)="toggleMenu()"
           >
             Palvelumme</a
           >
@@ -30,6 +32,8 @@
             routerLink="/hinnasto"
             routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
+            tabindex="0"
+            (click)="toggleMenu()"
           >
             Hinnasto</a
           >
@@ -39,6 +43,8 @@
             routerLink="/yhteystiedot"
             routerLinkActive="active-page"
             ariaCurrentWhenActive="page"
+            tabindex="0"
+            (click)="toggleMenu()"
           >
             Yhteystiedot</a
           >
