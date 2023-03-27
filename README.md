@@ -1,9 +1,23 @@
-# NurmijarvenLvi
+# Nurmijarven-Lvi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
 This is my *skills demonstration project* in Helsinki Vocational College for an existing HVAC (*heating, ventilation and air conditioning*) company. 
-The goal of this project was to build a fully responsive, mobile friendly site including a small portion in the backend. Backend consists of a social media controller which enriches the frontend with an API connection to bring data to the frontend via Instagram Basic Display API. 
+The goal of this project was to build a fully responsive, mobile friendly site including a small portion in the backend. Backend consists of a social media controller which enriches the frontend with an API connection to bring data (Instagram posts) to the frontend.
+
+Here are a few things **"What I learned"** during this project:
+
+- Angular Routing
+- Getting data from Instagram Basic Display API to the backend (built with PHP)
+- Build a service to get the data to the social media component in the frontend
+- Some *sass* -styling
+- Use Angular Observables
+- Build a mobile friendly site
+- Deploy a real site to the server
+- I surely missed something... "*And the list goes on... :)*"
+
+
+
 
 To serve or run tests on this development server, check instructions below:
 
