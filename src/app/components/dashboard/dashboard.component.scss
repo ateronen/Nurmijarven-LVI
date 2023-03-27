@@ -2,9 +2,9 @@
 
 .hero {
   background-image: linear-gradient(
-      0deg,
-      rgba($background-color-transparent, 0.3),
-      rgba($secondary-color, 1)
+      180deg,
+      rgba($secondary-color, 0.9),
+      rgba($secondary-color, 0.7)
     ),
     url("/assets/img/kylpyamme-vaaka.JPEG");
   width: 100%;
@@ -22,6 +22,11 @@
 }
 .content-wrapper {
   margin: 1.5em 2em;
+
+  animation-name: fadeInAnimation;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
 }
 .hero-intro {
   font-family: $hero-font-family;
@@ -53,10 +58,6 @@
     font-weight: 600;
     font-size: $font-size-large;
   }
-  // .button {
-  //   border: 3px solid $primary-text-color;
-  // }
-
   @media (max-width: $midBreakpoint) {
     border-radius: 0px;
   }
@@ -64,4 +65,13 @@
 .button-wrapper {
   margin: 1em auto;
   text-align: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

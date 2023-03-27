@@ -6,7 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 //ICONS
-import { faSquare, faCheckSquare, faBars, faXmark, faEnvelope, faPhone, faLocationDot, faHandPointRight, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import 
+{ faSquare, faCheckSquare, faBars, faXmark, faEnvelope, faPhone, faLocationDot, faHandPointRight, faAddressCard, faArrowUp } 
+from '@fortawesome/free-solid-svg-icons';
+
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // COMPONENTS
@@ -57,7 +60,8 @@ export class AppModule {
       faLocationDot,
       faSquareInstagram,
       faHandPointRight,
-      faAddressCard
+      faAddressCard,
+      faArrowUp
     );
   }
 }

@@ -3,8 +3,12 @@
 .container {
   min-height: 80dvh;
   min-height: 80vh;
-  h1 {
-    margin-top: 2em;
-    font-size: $font-size-large;
-  }
+  display: flex;
+}
+.button-wrapper {
+  margin: 0 auto;
+}
+h1 {
+  margin-top: 2em;
+  font-size: $font-size-large;
 }

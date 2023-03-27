@@ -1,7 +1,7 @@
 @import "src/styles.scss";
 
 .background-image-gradient {
-  @include theme($theme: BackGroundImage);
+  @include BackGroundImage;
 }
 .container {
   padding: 1.5em;
@@ -13,12 +13,32 @@
   justify-content: center;
 }
 .pricelist {
-  background: $primary-color;
+  background: radial-gradient($primary-color, rgba($primary-color, 0.8));
   font-size: $font-size-large;
   font-style: italic;
   margin-bottom: 2em;
   border-radius: 2em;
-  animation: 0.7s ease-out 0s 1 wait, 0.21s ease-out 0.7s 1 slideInFromBottom;
+  box-shadow: $box-shadow-main;
+  animation: 0.7s ease-out 0s 1 wait, 0.4s ease-out 0.7s 1 slideInFromBottom;
+  .button-small {
+    max-width: 9em;
+    font-size: calc($font-size * 0.8);
+  }
+  .price {
+    text-align: center;
+    animation-name: fadeInAnimation;
+    animation-fill-mode: both;
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 @keyframes wait {
   from {

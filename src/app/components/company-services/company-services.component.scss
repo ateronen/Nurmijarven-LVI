@@ -1,7 +1,7 @@
 @import "src/styles";
 
 .background-image-gradient {
-  @include theme($theme: BackGroundImage);
+  @include BackGroundImage;
 }
 .container {
   padding: 1.5em;

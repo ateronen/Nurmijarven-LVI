@@ -1,4 +1,3 @@
-@import "src/assets/scss/variables/palette.scss";
 @import "src/styles.scss";
 
 nav {
@@ -28,7 +27,6 @@ nav {
       width: 70%;
     }
   }
-
   .hamburger-menu {
     padding: 0;
     margin: 0;
@@ -39,7 +37,6 @@ nav {
       display: block;
     }
   }
-
   .menu-items-right {
     display: flex;
     align-items: center;
@@ -53,13 +50,11 @@ nav {
         top: 4em;
         left: 0;
         width: 100%;
+        z-index: 1;
 
-        /* @TODO:
-        Horizontally center mobile menu links.
-        Make open menu stick to the bottom of the navbar by calculating whatever the height of the navbar might be. */
+        /* @TODO: Create animation for menu items*/
         .menu-item {
-          // display: block;
-          background-color: $primary-color;
+          background-color: $mobile-menu-item-color;
           text-align: center;
           padding: 1em 0;
           border-bottom: 2px solid $primary-text-color;
@@ -75,7 +70,6 @@ nav ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  display: flex;
   gap: 1.5rem;
   font-weight: bold;
 }
@@ -83,8 +77,6 @@ nav a {
   color: inherit;
   text-decoration: none;
   height: 100%;
-  // display: flex;
-  // align-items: center;
   padding: 0.25rem;
 
   @if (max-width: $mobileBreakpoint) {
@@ -94,18 +86,21 @@ nav a {
 nav li .active-page {
   text-decoration: 3px solid $primary-text-color underline;
   @if text-decoration {
-    transtion: 0;
     color: $primary-text-color;
   }
 }
 nav li {
   transition: 0.4s ease;
 }
-
 nav li:hover {
   color: $primary-color;
 }
-
+nav button:hover {
+  color: $primary-color;
+}
+nav button:focus {
+  color: $primary-color;
+}
 nav .menu-icon-wrapper {
   display: flex;
   align-items: center;
@@ -113,4 +108,12 @@ nav .menu-icon-wrapper {
   height: 100%;
   width: 100%;
   padding-right: 0.7em;
+  color: $primary-text-color;
+  transition: 0.4s ease;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }

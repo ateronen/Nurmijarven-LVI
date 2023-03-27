@@ -23,3 +23,6 @@
   color: $secondary-text-color;
   transform: scale(1.05);
 }
+.button:focus-visible {
+  background-color: $secondary-color;
+}

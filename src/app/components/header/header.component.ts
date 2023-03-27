@@ -7,8 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  isDashboard = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+  closeMenuOnLoad() {
+    this.isDashboard = true;
+    this.isMenuOpen = false;
+    if (window.location.pathname === "/") {
+      window.location.reload();
+    }
   }
 }

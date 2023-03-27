@@ -1,7 +1,7 @@
 @import "src/styles.scss";
 
 .background-image-gradient {
-  @include theme($theme: BackGroundImage);
+  @include BackGroundImage;
 }
 .container {
   padding: 1.5em;
@@ -17,20 +17,23 @@ h1 {
   margin: 1.5em 0;
   font-size: $font-size-xl;
 }
+h2 {
+  font-size: $font-size-large;
+  margin-bottom: 1em;
+}
 ul {
   list-style-type: none;
+  margin-bottom: 2em;
 }
-// h1 {
-//   font-size: calc($font-size-xl * 0.8);
-//   font-family: $hero-font-family;
-//   font-weight: 900;
-//   color: $primary-text-color;
-//   text-shadow: $text-shadow-main;
-// }
-
-// .container {
-//   font-weight: 600;
-//   color: $primary-text-color;
-//   font-size: $font-size-large;
-//   text-shadow: $text-shadow-secondary;
-// }
+.contact-details {
+  background: radial-gradient($primary-color, rgba($primary-color, 0.8));
+  padding: 3em;
+  border-radius: 2em;
+  box-shadow: $box-shadow-main;
+  span {
+    font-weight: 600;
+  }
+  li {
+    padding-left: 1em;
+  }
+}

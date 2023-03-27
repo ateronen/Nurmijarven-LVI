@@ -1,1 +1,10 @@
+@import "src/styles.scss";
 
+.top-btn {
+  position: fixed;
+  bottom: 1em;
+  right: 0.5em;
+  z-index: 1;
+  border: 1px solid $primary-text-color;
+  font-size: 12px;
+}

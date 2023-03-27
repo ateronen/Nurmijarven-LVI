@@ -19,8 +19,8 @@ export class PricelistComponent {
     {
     "id": 1,
     "productName": "LVI-asennus/huoltotyöt",
-    "productPriceAlv": "63,24€/h",
-    "productPriceNoAlv": "51€/h"
+    "productPriceAlv": "65,72€/h",
+    "productPriceNoAlv": "53€/h"
     },
     {
     "id": 2,

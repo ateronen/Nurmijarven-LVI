@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetSocialDataService } from 'src/app/services/get-social-data.service';
 import { SocialPost } from 'src/app/components/social-media/social';
-// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-social-media',
@@ -13,9 +12,7 @@ export class SocialMediaComponent implements OnInit {
   postsResponse: SocialPost[] = [];
   isFetching = false;
 
-  constructor(private socialDataService: GetSocialDataService) {
-    
-  }
+  constructor(private socialDataService: GetSocialDataService) {}
   
   ngOnInit() {
     this.isFetching = true;
