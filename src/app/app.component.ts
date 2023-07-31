@@ -41,9 +41,10 @@ export class AppComponent implements OnInit {
         }),
         filter((route) => route.outlet === 'primary'),
         mergeMap((route) => route.data),
-        tap(({title,description}: Data) => {
+        tap(({title,description, keywords}: Data) => {
           this.metaService.updateTitle(title);
           this.metaService.updateDescription(description);
+          this.metaService.updateKeywords(keywords);
         })
       ).subscribe();
   }

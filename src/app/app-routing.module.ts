@@ -11,7 +11,15 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 const routes: Routes = [
 { path: '', redirectTo: '/', pathMatch: 'full' },
-{ path: '', component: DashboardComponent },
+{ path: '', component: DashboardComponent,
+    data: {
+    title: "Nurmijärven LVI Oy - Etusivu",
+    description: 
+    "LVI-asennus-, huolto- ja ylläpitotyöt tarpeen mukaan. Toimimme pääasiassa Nurmijärvellä ja lähikunnissa Uudenmaan alueella.",
+    keywords: 
+    "lvi, nurmijärvi, putkiasennus, putkiasentaja, putkiliike, lvi-huolto, uusimaa, lvi-työt, yrityksille, yhteistyökumppani"
+  }
+},
 { path: 'palvelumme', component: CompanyServicesComponent,
   data: {
     title: "Nurmijärven LVI Oy - Palvelumme",

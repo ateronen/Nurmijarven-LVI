@@ -19,4 +19,10 @@ export class MetaInformationService {
       this.meta.updateTag({name: 'description', content: description})
     }
   }
+
+  updateKeywords(keywords: string) {
+    if (keywords) {
+      this.meta.updateTag({name: 'keywords', content: keywords})
+    }
+  }
 }
