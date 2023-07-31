@@ -13,7 +13,7 @@
         </li>
       </ul>
       <ul class="hamburger-menu" role="navigation" aria-label="Mobile" (click)="toggleMenu()" tabindex="-1">
-            <button class="menu-icon-wrapper" type="button"><fa-icon [icon]="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" class="fa-fw" size="2x" ></fa-icon></button>
+            <button class="menu-icon-wrapper" type="button" aria-label="Menu Button"><fa-icon [icon]="isMenuOpen ? ['fas', 'xmark'] : ['fas', 'bars']" class="fa-fw" size="2x" ></fa-icon></button>
       </ul>
       <ul class="menu-items-right" role="navigation" aria-label="Main" [class.is-open]="isMenuOpen">
         <li class="menu-item">

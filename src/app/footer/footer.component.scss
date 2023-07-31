@@ -56,19 +56,24 @@ table {
   }
 }
 
-.italic-copyright {
-  font-family: $body-font-family;
-  font-style: italic;
+.copyright {
   text-align: center;
-  padding-top: 1em;
+  padding-top: 1.5em;
+  p,
+  button,
+  span {
+    font-size: 0.8rem;
+  }
 }
+
 .trusted-partner-logo {
   width: clamp(100px, 50%, 200px);
 }
 .footer-logo {
   width: clamp(150px, 50%, 300px);
 }
-.follow-on-instagram {
+.follow-on-instagram,
+.contact-dev {
   background: none;
   border: none;
   color: $primary-text-color;

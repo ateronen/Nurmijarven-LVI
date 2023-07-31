@@ -12,11 +12,31 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
 { path: '', redirectTo: '/', pathMatch: 'full' },
 { path: '', component: DashboardComponent },
-{ path: 'palvelumme', component: CompanyServicesComponent },
-{ path: 'hinnasto', component: PricelistComponent },
+{ path: 'palvelumme', component: CompanyServicesComponent,
+  data: {
+    title: "Nurmijärven LVI Oy - Palvelumme",
+    description: "Minkälaisia töitä teemme? Täältä näet saatavilla olevat palvelumme."
+  } 
+},
+{ path: 'hinnasto', component: PricelistComponent,
+  data: {
+    title: "Nurmijärven LVI Oy - Hinnasto",
+    description: "Täältä näet hinnastomme."
+  }
+},
 // { path: 'tarinamme', component: CompanyStoryComponent },
-{ path: 'yhteystiedot', component: ContactComponent },
-{ path: '**', component: PageNotFoundComponent },
+{ path: 'yhteystiedot', component: ContactComponent,
+    data: {
+    title: "Nurmijärven LVI Oy - Yhteystiedot",
+    description: "Tarvitsetko yhteistyökumppania? Ota yhteyttä."
+  }
+},
+{ path: '**', component: PageNotFoundComponent,
+    data: {
+    title: "Nurmijärven LVI Oy - Sivua ei löydy",
+    description: "Sivua ei löydy tai on tapahtunut virhe."
+  } 
+},
 ];
 
 @NgModule({

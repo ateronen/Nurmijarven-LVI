@@ -32,7 +32,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><button class="follow-on-instagram" type="button" aria-label="Open social media page on another tab" role="button" (click)="goToUrl()"><span><fa-icon [icon]="faSquareInstagram" class="fa-fw" size="3x"></fa-icon></span></button></td>
+                <td><button class="follow-on-instagram" type="button" aria-label="Open social media page on another tab" role="button" (click)="goToInstagram()"><span><fa-icon [icon]="faSquareInstagram" class="fa-fw" size="3x"></fa-icon></span></button></td>
             </tr>
             <thead>
                 <tr>
@@ -46,7 +46,8 @@
     </table>
     </div>
 </div>
-<div class="italic-copyright">
-    <p><span>&copy; </span>{{footerCopyright}}</p>
+<div class="copyright">
+    <p><span>&copy;</span>{{footerCopyright}}</p>
+    <div><p>Design and developement by </p><button class="contact-dev" type="button" role="button" (click)="goToDevContact()">Arttu Teronen</button></div>
 </div>
 </footer>

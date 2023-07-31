@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   companyName: String = "Nurmijärven LVI Oy";
   eInvoiceNr: String = "003732918027";
-  operator: String = "Apix Messaging Oy (003723327487)";
+  operator: String = "Pagero Oy (003723609900)";
   phone: String = "+358 404147502";
   email: String = "lauri(at)nurmijarvenlvi.fi";
   businessId: String = "3291802-7";
