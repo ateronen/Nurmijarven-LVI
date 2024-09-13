@@ -1,7 +1,7 @@
 //MODULES
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
@@ -26,28 +26,21 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    CompanyServicesComponent,
-    PricelistComponent,
-    CompanyStoryComponent,
-    ContactComponent,
-    SocialMediaComponent,
-    DashboardComponent,
-    PageNotFoundComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        CompanyServicesComponent,
+        PricelistComponent,
+        CompanyStoryComponent,
+        ContactComponent,
+        SocialMediaComponent,
+        DashboardComponent,
+        PageNotFoundComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
