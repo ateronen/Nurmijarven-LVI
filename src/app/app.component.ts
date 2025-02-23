@@ -1,19 +1,29 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Inject, OnInit} from '@angular/core';
 import { ActivatedRoute, Data, NavigationEnd, Router } from '@angular/router';
 import { MetaInformationService } from './services/meta-information.service';
 import { debounceTime, fromEvent, map, filter, mergeMap, tap} from 'rxjs';
+// import { GoogleAnalyticsService } from './services/google-analytics.service';
+import { AnalyticsService } from './services/analytics.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+
+  providers: [
+    AnalyticsService
+  ],
 })
 export class AppComponent implements OnInit {
+  title='';
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private metaService: MetaInformationService
+    private metaService: MetaInformationService,
+    // private gaService: GoogleAnalyticsService
+    private analyticsService: AnalyticsService
   ) {}
 
   showBtn$ = fromEvent(document, 'scroll').pipe(
@@ -47,5 +57,9 @@ export class AppComponent implements OnInit {
           this.metaService.updateKeywords(keywords);
         })
       ).subscribe();
+
+      // Init google analytics service
+      // this.gaService.init();
+      // this.analyticsService.trackEvent();
   }
 }

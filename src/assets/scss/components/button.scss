@@ -21,7 +21,7 @@
 .button:hover {
   background-color: $secondary-color;
   color: $secondary-text-color;
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 .button:focus-visible {
   background-color: $secondary-color;

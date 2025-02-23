@@ -6,12 +6,7 @@ $mobile-menu-item-color: #161616;
 $primary-text-color: #fdfff7;
 $secondary-text-color: #100b00;
 $footer-bg: #414f55;
-// $primary-linear-gradient-overlay: linear-gradient(
-//   90deg,
-//   rgba(29, 5, 120, 1) 0%,
-//   rgba(0, 107, 144, 1) 50%,
-//   rgba(29, 5, 120, 1) 100%
-// );
+$cookie-banner-bg: $footer-bg;
 
 $text-shadow-main: 0 1px 3px rgba($secondary-text-color, 0.3),
   0 3px 5px rgba($secondary-text-color, 0.2),

@@ -1,0 +1,20 @@
+<div class="cookie-btn-wrapper"><button class="cookie-settings-btn" popovertarget="cookiePopover">
+  <span aria-hidden="true">🍪</span>Evästeasetukset
+</button>
+</div>
+
+<dialog #cookiePopover id="cookiePopover" popover class="cookies-popover">
+  <p>
+    Käytämme evästeitä tarjoamamme sisällön ja mainosten räätälöimiseen, 
+    sosiaalisen median ominaisuuksien tukemiseen ja kävijämäärämme 
+    analysoimiseen. Lisäksi jaamme sosiaalisen median, 
+    mainosalan ja analytiikka-alan kumppaneillemme tietoja siitä, 
+    miten käytät sivustoamme.
+  </p>
+  <button class="consent-yes" (click)="acceptCookies()">Hyväksyn</button>
+  <button class="consent-no" (click)="rejectCookies()">Hylkään</button>
+  <button popovertarget="cookiePopover" popovertargetaction="hide" class="close-btn">
+    <span aria-hidden="true">❌</span>
+    <span class="sr-only">Sulje</span>
+  </button>
+</dialog>

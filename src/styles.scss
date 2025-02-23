@@ -9,42 +9,80 @@
 *,
 body,
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: $font-size;
-  font-family: $body-font-family;
-  line-height: $line-height;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: $font-size;
+    font-family: $body-font-family;
+    line-height: $line-height;
 }
-body,
-html {
-  width: 100%;
-  height: 100%;
-}
+
 body {
-  overflow: auto;
-  background: rgba($grey-overlay, 0.15);
+    overflow: auto;
+    background: rgba($grey-overlay, 0.15);
+    // position: relative;
 }
 h1,
 h2,
 h3 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  flex-grow: 1;
-  flex-basis: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-grow: 1;
+    flex-basis: 100%;
+    max-width: 65ch;
+    text-wrap: balance;
+}
+
+p {
+    max-width: 75ch;
 }
 .container {
-  max-width: 1200px;
-  flex-basis: 100%;
-  margin: 0 auto;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+    max-width: 1200px;
+    flex-basis: 100%;
+    margin: 0 auto;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 a,
 button {
-  cursor: pointer;
+    cursor: pointer;
+}
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+/*
+  If the user has expressed their preference for
+  reduced motion, then don't use animations
+*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-transition: none!important;
+        -moz-transition: none!important;
+        -o-transition: none!important;
+        -ms-transition: none!important;
+        transition: none!important;
+      
+        -webkit-transition-duration: none!important;
+        -moz-transition-duration: none!important;
+        -o-transition-duration: none!important;
+        -ms-transition-duration: none!important;
+        transition-duration: none!important;
+      
+        -webkit-animation-duration: unset!important;
+        -moz-animation-duration: unset!important;
+        -o-animation-duration: unset!important;
+        -ms-animation-duration: unset!important;
+        animation-duration: unset!important;
+    }
 }

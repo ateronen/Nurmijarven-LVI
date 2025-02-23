@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
     <div class="footer-table">
-        <table class="footer-table-left">
+        <table role="presentation" class="footer-table-left">
             <thead>
             <tr>
                 <th><a routerLink="/"><img class="footer-logo" src="assets/img/Logotiedostot/NLVI-logo-06.png" alt="Valkoinen Nurmijärven LVI logo"></a></th>
@@ -24,7 +24,7 @@
         </table>
     </div>
     <div class="footer-table">
-    <table class="footer-table-right">
+    <table role="presentation" class="footer-table-right">
         <thead>
             <tr>
                 <th>Seuraa töitämme somessa: </th>
@@ -32,7 +32,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><button class="follow-on-instagram" type="button" aria-label="Open social media page on another tab" role="button" (click)="goToInstagram()"><span><fa-icon [icon]="faSquareInstagram" class="fa-fw" size="3x"></fa-icon></span></button></td>
+                <td><button class="follow-on-instagram" type="button" aria-label="Avaa Nurmijärven LVI Oy:n Instagram-sivu uudella välilehdellä" role="button" (click)="goToInstagram()"><span><fa-icon [icon]="faSquareInstagram" class="fa-fw" size="3x"></fa-icon></span><span class="tooltiptext">Avautuu uuteen välilehteen</span></button></td>
             </tr>
             <thead>
                 <tr>
@@ -40,14 +40,13 @@
                 </tr>
             </thead>
             <tr>
-                <td><img class="trusted-partner-logo" src="assets/img/Logotiedostot/LK_valkoinen_rgb.jpg" alt="Luotettava kumppani logo"></td>
+                <td><img class="trusted-partner-logo" src="assets/img/Logotiedostot/LK_valkoinen_rgb.jpg" width="150" height="auto" alt="Luotettava kumppani logo"></td>
             </tr>
         </tbody>
     </table>
     </div>
 </div>
 <div class="copyright">
-    <p><span>&copy;</span>{{footerCopyright}}</p>
-    <div><p>Design and developement by </p><button class="contact-dev" type="button" role="button" (click)="goToDevContact()">Arttu Teronen</button></div>
+    <p><span>&copy; </span>{{footerCopyright}}</p>
 </div>
 </footer>

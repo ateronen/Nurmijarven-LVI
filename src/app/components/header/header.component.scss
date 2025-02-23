@@ -29,7 +29,7 @@ nav {
   }
   .hamburger-menu {
     padding: 0;
-    margin: 0;
+    margin: auto;
     display: none;
     align-items: center;
 
@@ -105,8 +105,8 @@ nav .menu-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  // height: 100%;
+  // width: 100%;
   padding-right: 0.7em;
   color: $primary-text-color;
   transition: 0.4s ease;
@@ -116,4 +116,8 @@ button {
   border: none;
   padding: 0;
   margin: 0;
+
+  fa-icon.ng-fa-icon {
+    width: 100%;
+  }
 }

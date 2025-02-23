@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { AnalyticsService } from './services/analytics.service';
 
 //ICONS
 import 
@@ -23,8 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
-
+import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -37,24 +37,28 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
         SocialMediaComponent,
         DashboardComponent,
         PageNotFoundComponent,
+        CookieBannerComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent], 
+    imports: [BrowserModule,
         AppRoutingModule,
-        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
-export class AppModule {
-  constructor(library: FaIconLibrary) {
-    library.addIcons(
-      faSquare,
-      faCheckSquare,
-      faBars,
-      faXmark,
-      faEnvelope,
-      faPhone,
-      faLocationDot,
-      faSquareInstagram,
-      faHandPointRight,
-      faAddressCard,
-      faArrowUp
-    );
-  }
+        FontAwesomeModule], 
+        
+    providers: [provideHttpClient(withInterceptorsFromDi()), AnalyticsService/* GoogleAnalyticsService*/] })
+    export class AppModule {
+      constructor(library: FaIconLibrary) {
+        library.addIcons(
+          faSquare,
+          faCheckSquare,
+          faBars,
+          faXmark,
+          faEnvelope,
+          faPhone,
+          faLocationDot,
+          faSquareInstagram,
+          faHandPointRight,
+          faAddressCard,
+          faArrowUp
+        );
+      }
 }
